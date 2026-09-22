@@ -126,6 +126,30 @@ Fill in a row in the table further down this file, and archive the old `.pbix` i
 
 ---
 
+# Part 2b: Building a brand-new report from scratch
+
+Different from Part 2. Part 2 is for a report that **already exists and is already published** — you are just catching Git up to something real. This part is for a report that **does not exist anywhere yet** — no `.pbix`, nothing published, nothing to catch up to.
+
+The dividing line is R1: `main` is supposed to be what's published in the Service. A report that has never been published has nothing for `main` to correctly reflect yet, so unlike Part 2, **this does not skip branching.** Everything here goes through Part 3's branch-first flow, from the very first file.
+
+### 1. Pull `main` and create a branch first, before creating anything
+
+Same as Part 3, Step 1: ask Claude to pull `main` and create a new branch, named for the new report plus your initials and/or the month. Do this **before** you create the folder or open Power BI Desktop — not after.
+
+### 2. Create the folder and build the report on that branch
+
+Create `C:\Users\yourusername\Git\<reponame>\<reportname>\` in `snake_case`, same as Part 2 Step 2. Build the report fresh in Power BI Desktop (or start from a blank PBIP), saving into that folder as you go. Commit along the way like any other round of work (Part 3, Steps 2–4).
+
+### 3. Merge and publish together, the first time
+
+When the report is ready for its first-ever publish to the Service: open a pull request, merge it, then publish from Power BI Desktop in the same sitting (R6). This is the moment `main` and the Service become true for this report at the same time — do not publish before merging, and do not merge without publishing right after.
+
+### 4. Add the report to the inventory table
+
+Same as Part 2 Step 6.
+
+---
+
 # Part 3: A round of work
 
 This is the loop you will run every time from now on.
