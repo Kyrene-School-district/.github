@@ -100,7 +100,7 @@ Also create a subfolder `C:\Users\yourusername\Git\pbi-talent\<reportname>\artif
 
 ### 4. Check before you commit
 
-Ask Claude to show you what's new (`git status`). You will see a long list of new files, typically 40 to 150 depending on the report (those are coming from the PBIP structure. don't worry, you only created one PBIP). Before committing, confirm:
+Ask Claude to show you what's new (`git status`). You will see a long list of new files, typically 40 to 150 depending on the report (those come from the PBIP structure — don't worry, you only created one PBIP). Before committing, confirm:
 
 - ✅ `.tmdl` files exist under `<name>.SemanticModel\definition\`
 - ✅ A `<name>.Report\definition\pages\` folder exists, with a folder per visual
@@ -134,7 +134,7 @@ The dividing line is R1: `main` is supposed to be what's published in the Servic
 
 ### 1. Pull `main` and create a branch first, before creating anything
 
-Same as Part 3, Step 1: ask Claude to pull `main` and create a new branch, named for the new report plus your initials and/or the month. Do this **before** you create the folder or open Power BI Desktop — not after.
+Same as Part 3, Step 1: ask Claude to pull `main` (official command: git pull) and create a new branch, named for the new report plus your initials and/or the month. Do this **before** you create the folder or open Power BI Desktop — not after.
 
 ### 2. Create the folder and build the report on that branch
 
@@ -161,7 +161,7 @@ There is only one copy of `C:\Users\yourusername\Git\pbi-talent\` on your machin
 **Run this decision every time you sit down to work, in order:**
 
 1. **Ask Claude to check status first** (official command: git status; you can also say "check status" / "what's going on"). This tells you whether anything is uncommitted and what branch you're on.
-    2. **If `git status` shows uncommitted changes** — commit them, or ask Claude to stash them, before doing anything else below. Pulling or switching branches with dirty changes sitting around is how work gets lost or   tangled into the wrong branch.
+2. **If `git status` shows uncommitted changes** — commit them, or ask Claude to stash them, before doing anything else below. Pulling or switching branches with dirty changes sitting around is how work gets lost or tangled into the wrong branch.
 3. **If you are starting a brand-new round of work on a report that nobody else is touching** — ask Claude to pull `main` (official command: git pull) and create a new branch, named report plus your initials and/or the month: `mandatorypd-sep`, `staffing-rb-901`. No spaces.
 4. **If you are picking up a round someone else already started, or coming back to your own branch from a prior session** — ask Claude to check out that existing branch by name instead. Do not make a second branch for the same round of work — it just splits the history and makes the eventual pull request harder to read.
 5. **If you are not sure whether a branch already exists for the report you are about to touch** — ask Claude to list the repo's branches, or ask a teammate, before creating one.
